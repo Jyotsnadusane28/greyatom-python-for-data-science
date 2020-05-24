@@ -10,7 +10,6 @@ loan_status = data['Loan_Status'].value_counts()
 loan_status.plot(kind = 'bar')
 plt.show()
 
-
 # --------------
 #Code starts here
 property_and_loan = data.groupby(['Property_Area','Loan_Status']).size().unstack()
@@ -19,7 +18,6 @@ plt.xlabel = ("Property Area")
 plt.ylabel = ("Loan Status")
 plt.xticks(rotation = 45)
 plt.show()
-
 
 # --------------
 #Code starts here
@@ -32,7 +30,6 @@ plt.ylabel = ("Loan Status")
 plt.xticks(rotation = 45)
 plt.show()
 
-
 # --------------
 #Code starts here
 graduate = data[data['Education'] == 'Graduate']
@@ -41,23 +38,10 @@ graduate['LoanAmount'].plot(kind='density', label='Graduate')
 not_graduate['LoanAmount'].plot(kind = 'density',label = 'Not Graduate')
 plt.show()
 
-
-
-
-
-
-
-
-
-
-
-
-
 #Code ends here
 
 #For automatic legend display
 plt.legend()
-
 
 # --------------
 #Code starts here
@@ -71,6 +55,3 @@ ax_2.scatter(data['CoapplicantIncome'],data["LoanAmount"])
 data['TotalIncome'] = data['ApplicantIncome'] + data['CoapplicantIncome']
 ax_3.set_title('Total Income')
 ax_3.scatter(data['TotalIncome'],data["LoanAmount"])
-
-
-
